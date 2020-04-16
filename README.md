@@ -20,34 +20,35 @@
 - r.source // 'abc'
 
 # test  (返回布尔值)
-## /cat/.test('cats and dogs')  // true
+- /cat/.test('cats and dogs')  // true
 
 ## 带g修饰符
-  var r = /x/g;
-  var s = '_x_x';
-  r.lastIndex //0
-  r.test(s)  // true
-  r.lastIndex //2
-  r.test(s) // true
-  r.lastIndex  // 4
-  r.test(s)  // false
+1. var r = /x/g;
+2. var s = '_x_x';
+3. r.lastIndex //0
+4. r.test(s)  // true
+5. r.lastIndex //2
+6. r.test(s) // true
+7. r.lastIndex  // 4
+8. r.test(s)  // false
 
-## while (/a/g.test("babaa"))  count++;  上面代码会无限循环，/a/g 每次都是一个新的正则表达式
+### while (/a/g.test("babaa"))  count++;  上面代码会无限循环，/a/g 每次都是一个新的正则表达式
 
-## new RegExp('').test('abc')   // true
+### new RegExp('').test('abc')   // true
 
 # exec  (返回数组，或者null)  数组只会返回一项(无论是否带g)
+
 ## 简单匹配
-  var s = '_x_x';
-  var r1 = /x/;
-  var r2 = /y/;
-  r1.exec(s)  // ["x"]
-  r2.exec(s)  // null
+1. var s = '_x_x';
+2. var r1 = /x/;
+3. var r2 = /y/;
+4. r1.exec(s)  // ["x"]
+5. r2.exec(s)  // null
 
 ## 圆括号(组匹配) 
-  var s ="_x_x";
-  var r = /_(x)/;
-  r.exec(s)  // ["_x", "x"]
+1. var s ="_x_x";
+2. var r = /_(x)/;
+3. r.exec(s)  // ["_x", "x"]
 
 ## 属性
   input：整个原字符串。
